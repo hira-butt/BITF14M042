@@ -1,0 +1,23 @@
+﻿@(Layout="~/Views/Shared/_Alayout.cshtml")
+@model MvcApplication1.Models.Teacher
+
+@{
+    ViewBag.Title = "Update";
+}
+
+
+<h3>Update</h3>
+<br>
+<div class="content-bg">
+<div class="wrap">
+<div class="content top1">
+<form action = "/Admin/UpdateConfirm/@Model.Tid" method="post">
+     Name        <input type = "text" value ="@Model.Name" name ="name"/><br><br>
+     Phone No    <input type = "number" value ="@Model.PhoneNo" name ="phone"/><br><br>
+     Description <input type ="text" value ="@Model.Description" name ="description"/><br><br>
+     Image       <input type ="text" value ="@Model.Image" name="img"/><br><br>
+     Email       <input type="text" value ="@Model.Email" name="email"><br><br>
+     Password    <input type="text" value ="@Model.Password" name="pass"><br><br>
+    <input type="submit" value="Update Teacher"/>
+</form>
+</div></div></div>

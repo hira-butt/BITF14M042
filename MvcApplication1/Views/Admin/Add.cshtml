@@ -1,0 +1,27 @@
+﻿@(Layout="~/Views/Shared/_Alayout.cshtml")
+@model MvcApplication1.Models.Teacher
+
+@{
+    ViewBag.Title = "Add";
+}
+
+<h3>Add</h3>
+<br>
+<form action ="/Admin/AddFunction" method = "post">
+  @*  Name @Html.TextBoxFor(model => model.Name)
+    Phone @Html.TextBoxFor(model => model.PhoneNo)
+    Description @Html.TextBoxFor(model => model.Description)
+    Image @Html.TextBoxFor(model => model.Image)
+    Email @Html.TextBoxFor(model => model.Email)
+    Password @Html.TextBoxFor(model => model.Password)*@
+
+    
+    Name <input type="text" name="Name"/>
+    Phone No<input type="number" name="PhoneNo"/>
+    Description<input type="text" name="Description"/>
+    Image<input type="text" name="Image"/>
+    Email<input type="text" name="Email"/>
+    Password<input type="text" name="Password"/>
+    
+    <input type="submit" value="Add Teacher"/>
+</form>

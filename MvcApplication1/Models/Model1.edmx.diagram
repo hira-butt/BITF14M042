@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5e4f6ce69b6a447ba9f04f322d5fef00" Name="Diagram1">
+        <EntityTypeShape EntityType="Database1Model.Student" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Database1Model.Teacher" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Database1Model.UserProfile" Width="1.5" PointX="1.2667950751570962" PointY="5.8159379390142565" />
+        <EntityTypeShape EntityType="Database1Model.webpages_Membership" Width="1.5" PointX="7.3541015569838244" PointY="5.9391473708390947" />
+        <EntityTypeShape EntityType="Database1Model.webpages_OAuthMembership" Width="1.5" PointX="1.5138762972847912" PointY="15.326127014740429" />
+        <EntityTypeShape EntityType="Database1Model.webpages_Roles" Width="1.5" PointX="10.809082449790594" PointY="20.367612565107464" />
+        <AssociationConnector Association="Database1Model.webpages_UsersInRoles" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

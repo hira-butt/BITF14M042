@@ -1,0 +1,39 @@
+﻿@(Layout="~/Views/Shared/_Alayout.cshtml")
+@model List<MvcApplication1.Models.Teacher>
+
+@{
+    ViewBag.Title = "Mstaff";
+}
+
+<h3>Manage Teacher</h3>
+<div class="content-bg">
+<div class="wrap">
+<div class="content top1">
+	<div class="cnt-btm">
+		<h3 class="left">our Staff</h3> <br>
+       <a href="~/Admin/Add">Add Teacher</a><br>
+        <a href="~/Admin/searchTeacher">Search Teacher</a>
+	@*	<h3 class="right">show&nbsp;<span><a href="">all</a></span></h3> *@
+		<div class="clear"></div>
+	</div>
+		<div class="section group">
+            @foreach(var t in Model)          
+            {
+				<div class="grid_1_of_3 images_1_of_3">
+					<a href="~/Home/Details"><img src="~/@t.Image" alt=""></a>
+					
+                    <h3>@Html.ActionLink(t.Name , "Index" , "Home")</h3>
+				    <p>@t.Description </p>
+                    <p>Phone: @t.PhoneNo</p>
+                    <p>Email:  @t.Email</p>
+                    <br>
+                    <a href="~/Admin/Update/@t.Tid">Update</a><br>
+                    <a href="~/Admin/Delete/@t.Tid">Delete</a>
+				    <div class="button"><span><a href="~/Home/Details">Read More</a></span></div>
+               </div>
+            }
+		</div>
+    </div>
+</div>
+</div>
+ 

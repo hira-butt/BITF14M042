@@ -1,0 +1,128 @@
+﻿@{
+    ViewBag.Title = "Student";
+}
+
+<h2>Student</h2>
+
+@model List<MvcApplicationAdmin.Models.Teacher>
+ 
+<h2>List of Teachers</h2>
+<br>
+<br>
+
+@foreach (var t in Model)
+{
+    <strong>Teacher id</strong>
+    <span style="margin-left:5em;">
+        @t.Tid
+    </span>
+    <br>
+    <strong>Name</strong>
+    <span style="margin-left:7em;">
+        @t.Name
+    </span>
+    <br>
+    <strong>Phone No:</strong>
+    <span style="margin-left:5em;">
+        @t.PhoneNo
+    </span>
+    <br>
+    
+    <a href="~/Home/Update/@t.Tid">Update</a>
+    <a href="~/Home/Delete/@t.Tid">Delete</a>
+    <hr>
+    <br>
+   
+}
+ <a href="~/Home/Add">Add Teacher</a>
+
+
+
+<!--
+<h2>List of Teachers</h2>
+<br>
+<br>
+
+<table>
+    <tr>
+        <td>Tid</td>
+        <td>Name</td>
+        <td>PhoneNo</td>
+    </tr>
+
+    @foreach(var t in Model)
+    {
+         <tr>
+             <td>@t.Tid</td>
+             <td>@t.Name</td>
+             <td>@t.PhoneNo</td>
+         </tr>
+    }
+</table>-->
+
+
+
+
+
+ <!--
+<div class="content-bg">
+<div class="wrap">
+<div class="content top1">
+	<div class="cnt-btm">
+		<h3 class="left">our Staff</h3> 
+	@*	<h3 class="right">show&nbsp;<span><a href="">all</a></span></h3> *@
+		<div class="clear"></div>
+	</div>
+		<div class="section group">
+				<div class="grid_1_of_3 images_1_of_3">
+					<a href="~/Home/Details"><img src="~/Images/staff2.jpg" alt=""></a>
+					  <h3>Mr. Noman Javed</h3>
+					  <p>Calculus1,Calculus2 , Mid-Level Math </p>
+					  <p>Bachelors in Mathematics, Generral from University of Sargodha </p>
+				     <div class="button"><span><a href="~/Home/Details">Read More</a></span></div>
+				</div>
+				<div class="grid_1_of_3 images_1_of_3">
+				<a href="~/Home/Details"><img src="~/Images/staff1.jpg" alt=""></a>
+					  <h3>Miss Sana Omer</h3>
+					  <p>English, Essay Writing </p>
+					  <p>Bachelors in English Language and Literature, General from University of Punjab </p>
+				     <div class="button"><span><a href="~/Home/Details">Read More</a></span></div>
+				</div>
+				<div class="grid_1_of_3 images_1_of_3">
+					<a href="~/Home/Details"><img src="~/Images/staff3.jpg" alt=""></a>
+					  <h3>Mr. Ahsan Raza</h3>
+					  <p> Physics</p>
+					  <p>Bachelors in Physics, General from University of Lahore </p>
+				     <div class="button"><span><a href="~/Home/Details">Read More</a></span></div>
+				</div>
+			</div>
+			<div class="section group">
+				<div class="grid_1_of_3 images_1_of_3">
+					<a href="~/Home/Details"><img src="~/Images/staff4.jpg" alt=""></a>
+					  <h3> Mr. Ahmed Ali</h3>
+					  <p>Chemistry</p>
+					  <p>Bachelors in Chemistry, General from Government College University Lahore</p>
+				     <div class="button"><span><a href="~/Home/Details">Read More</a></span></div>
+				</div>
+				<div class="grid_1_of_3 images_1_of_3">
+					  <a href="~/Home/Details"><img src="~/Images/staff5.jpg" alt=""></a>
+					  <h3>Miss Momina Azhar</h3>
+				     <div class="button">
+				       <p>Biology , Chemistry</p>
+                       <p>Bachelors in Biochemistry, General from University of Punjab Lahore</p>
+                     <span><a href="~/Home/Details">Read More</a></span></div>
+				</div>
+				<div class="grid_1_of_3 images_1_of_3">
+					 <a href="~/Home/Details"><img src="~/Images/staff6.jpg" alt=""></a>
+					  <h3>Mr. Fahad Aftab </h3>
+					  <p>Economics, Statistics</p>
+                      <p>Bachelors in Economics, General From Quiad-e-Azam University</p>
+				     <div class="button"><span><a href="~/Home/Details">Read More</a></span></div>
+				</div>
+			</div>
+</div>
+</div>
+</div>
+ 
+ 
+-->

@@ -1,0 +1,176 @@
+﻿@(Layout = "~/Views/Shared/_loginLayout.cshtml")
+
+@{
+    ViewBag.Title = "Login";
+}
+
+
+<div class="content-bg">
+<div class="wrap">
+<div class="content">
+<div class="section group">	
+	<div class="col span_2_of_3">
+			  <div class="contact-form">
+			  	<h3>Sign In</h3>
+				    <form action="/Home/LoginFunction" method="post"  id="signInForm" class="form-horizontal"
+                        data-fv-framework="bootstrap"
+                        data-fv-icon-valid="glyphicon glyphicon-ok"
+                        data-fv-icon-invalid="glyphicon glyphicon-remove"
+                        data-fv-icon-validating="glyphicon glyphicon-refresh">
+
+					    <div class="form-group">
+					    	<span><label class="col-xs-3 control-label">E-MAIL</label></span>
+					    	<div class="col-xs-5">
+                                <div class="col-xs-7">
+                               <span>
+                                <input type="email" class="form-control" value="" name="email" 
+                                    data-fv-emailaddress="true"
+                                    data-fv-emailaddress-message="The value is not a valid email address"
+                                    required
+                                    data-fv-notempty-message="The email is required"  />
+					    	      </span></div></div>
+					    </div>
+					    <div class="form-group" >
+					     	<span><label class="col-xs-3 control-label">PASSWORD</label></span>
+					    		<div class="col-xs-5"><span>
+                                    <input type="password" class="form-control" value="" name="password"
+                                       required
+                                    data-fv-notempty-message="The password is required" />
+					    		</span></div>
+					    </div>
+					   <div class="form-group">
+                           <div class="col-xs-6 col-xs-offset-3">
+					   		<span><button type="submit" class="btn btn-default" value="Login">Sign In</button></span></div>
+					  </div>
+	     	    </form>
+		    </div>
+  		</div>	
+</div>
+</div>
+</div>
+</div>
+
+<script>
+    $(document).ready(function(){
+        $('#signInForm').formValidation();
+    });
+</script>
+
+@*
+<body>
+	<header role="banner">
+		<div id="cd-logo">
+        <!--    <a href="#0"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/148866/cd-logo_1.svg" alt="Logo">
+            </a>-->
+            <a href="#"><img src="~/Images/logo.png" alt="" title="logo"></a>
+		</div>
+
+		<nav class="main-nav">
+			<ul>
+				<!-- inser more links here -->
+				<li><a class="cd-signin" href="#0">Sign in</a></li>
+				<li><a class="cd-signup" href="#0">Sign up</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<div class="cd-user-modal"> <!-- this is the entire modal form, including the background -->
+		<div class="cd-user-modal-container"> <!-- this is the container wrapper -->
+			<ul class="cd-switcher">
+				<li><a href="#0">Sign in</a></li>
+				<li><a href="#0">New account</a></li>
+			</ul>
+
+			<div id="cd-login"> <!-- log in form -->
+				<form class="cd-form" action="/Home/LoginFunction" method="post">
+					<p class="fieldset">
+						<label class="image-replace cd-email" for="signin-email">E-mail</label>
+						<input class="full-width has-padding has-border" name="email" id="signin-email" type="email" placeholder="E-mail">
+						<span class="cd-error-message">Error message here!</span>
+					</p>
+
+					<p class="fieldset">
+						<label class="image-replace cd-password" for="signin-password">Password</label>
+						<input class="full-width has-padding has-border" name="password" id="signin-password" type="text"  placeholder="Password">
+						<a href="#0" class="hide-password">Hide</a>
+						<span class="cd-error-message">Error message here!</span>
+					</p>
+
+					<p class="fieldset">
+						<input type="checkbox" id="remember-me" checked>
+						<label for="remember-me">Remember me</label>
+					</p>
+
+					<p class="fieldset">
+						<input class="full-width" type="submit" value="Login" >
+					</p>
+				</form>
+				
+		@*		<p class="cd-form-bottom-message"><a href="#0">Forgot your password?</a></p> *@
+				<!-- <a href="#0" class="cd-close-form">Close</a> -->
+	@*		</div> <!-- cd-login -->
+
+			<div id="cd-signup"> <!-- sign up form -->
+				<form class="cd-form">
+					<p class="fieldset">
+						<label class="image-replace cd-username" for="signup-username">Username</label>
+						<input class="full-width has-padding has-border" id="signup-username" name="uname" type="text" placeholder="Username">
+						<span class="cd-error-message">Error message here!</span>
+					</p>
+
+					<p class="fieldset">
+						<label class="image-replace cd-email" for="signup-email">E-mail</label>
+						<input class="full-width has-padding has-border" id="signup-email" type="email" name="email" placeholder="E-mail">
+						<span class="cd-error-message">Error message here!</span>
+					</p>
+
+					<p class="fieldset">
+						<label class="image-replace cd-password" for="signup-password">Password</label>
+						<input class="full-width has-padding has-border" id="signup-password" type="text" name="password" placeholder="Password">
+						<a href="#0" class="hide-password">Hide</a>
+						<span class="cd-error-message">Error message here!</span>
+					</p>
+
+                    <p class="fieldset">
+						<label class="image-replace cd-username" for="signup-standard">Standard</label>
+						<input class="full-width has-padding has-border" id="signup-standard" name="standard" type="text" placeholder="Standard">
+						<span class="cd-error-message">Error message here!</span>
+					</p>
+
+					<p class="fieldset">
+						<input type="checkbox" id="accept-terms">
+						<label for="accept-terms">I agree to the <a href="#0">Terms</a></label>
+					</p>
+
+					<p class="fieldset">
+						<input class="full-width has-padding" type="submit" value="Create account">
+					</p>
+				</form>
+
+				<!-- <a href="#0" class="cd-close-form">Close</a> -->
+			</div> <!-- cd-signup -->
+
+			<div id="cd-reset-password"> <!-- reset password form -->
+				<p class="cd-form-message">Lost your password? Please enter your email address. You will receive a link to create a new password.</p>
+
+				<form class="cd-form">
+					<p class="fieldset">
+						<label class="image-replace cd-email" for="reset-email">E-mail</label>
+						<input class="full-width has-padding has-border" id="reset-email" type="email" placeholder="E-mail">
+						<span class="cd-error-message">Error message here!</span>
+					</p>
+
+					<p class="fieldset">
+						<input class="full-width has-padding" type="submit" value="Reset password">
+					</p>
+				</form>
+
+				<p class="cd-form-bottom-message"><a href="#0">Back to log-in</a></p>
+			</div> <!-- cd-reset-password -->
+			<a href="#0" class="cd-close-form">Close</a>
+		</div> <!-- cd-user-modal-container -->
+	</div> <!-- cd-user-modal -->
+</body>
+
+*@
+

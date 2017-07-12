@@ -1,0 +1,98 @@
+﻿@model MvcApplication1.Models.Student
+@(Layout = "~/Views/Shared/_loginLayout.cshtml")
+
+@{
+    ViewBag.Title = "SignUp";
+}
+
+
+@*
+<form action ="/Home/SignUpFunction" method = "post">
+  
+    <input type="submit" value="SignUp"/>
+</form>*@
+
+<div class="content-bg">
+<div class="wrap">
+<div class="content">
+<div class="section group">	
+	<div class="col span_2_of_3">
+			  <div >
+			  	<h3>Sign Up</h3>
+				    <form  action="/Home/SignUpFunction" method="post"  id="signUpForm" class="form-horizontal"
+                        data-fv-framework="bootstrap"
+                        data-fv-icon-valid="glyphicon glyphicon-ok"
+                        data-fv-icon-invalid="glyphicon glyphicon-remove"
+                        data-fv-icon-validating="glyphicon glyphicon-refresh">
+
+                         <div class="form-group" >
+					     	<span><label class="col-xs-3 control-label">Name</label> 
+                                  <br/>                      
+					     	</span>
+                              <br/>
+					    		<div class="col-xs-5"><span>
+                                    <input type="text" class="form-control" value="" name="Name"
+                                       required
+                                    data-fv-notempty-message="The name is required" />
+					    		</span></div>
+					    </div>
+                         <br/>
+					    <div class="form-group">
+					    	<span><label class="col-xs-3 control-label">E-mail</label> <br/></span> <br/>
+					    	<div class="col-xs-5">
+                                <div class="col-xs-7">
+                               <span>
+                                <input type="email" class="form-control" value="" name="Email" 
+                                    data-fv-emailaddress="true"
+                                    data-fv-emailaddress-message="The value is not a valid email address"
+                                    required
+                                    data-fv-notempty-message="The email is required"  />
+					    	      </span></div></div>
+					    </div>
+                         <br/>
+					    <div class="form-group" >
+					     	<span><label class="col-xs-3 control-label">Password</label> <br/></span> <br/>
+					    		<div class="col-xs-5"><span>
+                                    <input type="password" class="form-control" value="" name="Password"
+                                       required
+                                    data-fv-notempty-message="The password is required" />
+					    		</span></div>
+					    </div>
+                         <br/>
+                         <div class="form-group" >
+					     	<span><label class="col-xs-3 control-label">Confirm Password</label> <br/></span> <br/>
+					    		<div class="col-xs-5"><span>
+                                    <input type="password" class="form-control" value="" name="Cpassword"
+                                       required
+                                    data-fv-notempty-message="The password is required" />
+					    		</span></div>
+					    </div>
+                         <br/>
+                         <div class="form-group" >
+					     	<span><label class="col-xs-3 control-label">Grade</label> <br/></span> <br/>
+					    		<div class="col-xs-5"><span>
+                                    <input type="text" class="form-control" value="" name="Grade"
+                                       required
+                                    data-fv-notempty-message="The standard is required" />
+					    		</span></div>
+					    </div>
+                         <br/>
+					   <div class="form-group">
+                           <div class="col-xs-6 col-xs-offset-3">
+                                <br/>
+					   		<span><button type="submit" class="btn btn-default" value="">Create Account</button></span></div>
+					  </div>
+	     	    </form>
+		    </div>
+  		</div>	
+</div>
+</div>
+</div>
+</div>
+
+<script>
+    $(document).ready(function(){
+        $('#signUpForm').formValidation();
+    });
+</script>
+

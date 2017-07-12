@@ -1,0 +1,16 @@
+﻿@using MvcApplication1.Models
+@model IEnumerable<MvcApplication1.Models.Teacher>
+
+
+ @foreach (var p in Model)
+           {
+              
+                     <tr>
+                        <td>@p.Name          </td>
+                        <td>@p.Email         </td>       
+                        <td>@p.PhoneNo       </td>
+                        <td>"~/"@p.Image     </td>
+                        <td>@p.Description   </td>
+                     </tr>
+           }
+

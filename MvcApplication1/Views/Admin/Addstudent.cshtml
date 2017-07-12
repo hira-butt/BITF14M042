@@ -1,0 +1,18 @@
+﻿@(Layout="~/Views/Shared/_Alayout.cshtml")
+@{
+    ViewBag.Title = "Addstudent";
+}
+
+<h3>Add Student</h3>
+<br>
+<form action ="/Admin/AddStudent" method = "post">
+  @*  Name @Html.TextBoxFor(model => model.Name)
+    Phone @Html.TextBoxFor(model => model.PhoneNo)*@
+    Name <input type="text" name="Name"/>
+    Email<input type="text" name="Email"/>
+    Password<input type="text" name="Password"/>
+    Grade<input type="text" name="Grade"/>
+      
+    <input type="submit" value="Add Student"/>
+</form>
+
